@@ -1,4 +1,7 @@
 os: osx
 osx_image: xcode12.5
 language: swift
+env:
+  global:
+  - secure: 123
 script: xcodebuild clean build test -workspace TestCI.xcworkspace -scheme TestCI -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.5,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
